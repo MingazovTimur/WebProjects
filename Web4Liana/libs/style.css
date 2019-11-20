@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Playfair+Display|Prata&display=swap');
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+*{
+	box-sizing: border-box;
+	transition: all 0.5s ease 0;
+	left: 0;
+}
+
+body{
+	background-size: 100%;
+
+}
+
+header{
+}
+
+p{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.row { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.row { display: block; }
+/* close commented backslash hack */
+
+#wrapper{
+	margin-left:auto;
+    margin-right:auto;
+    max-width: 1300px;
+}
+
+.headLine{
+	top: 0;
+	width: 100%;
+	height: 6%;
+	min-height: 50px;
+	position: fixed;
+	background-color: #dbdad8;
+	display: none;
+	z-index: 999999;
+}
+
+.headLineText{
+	position: absolute;
+	padding-top: .5%;
+	height: auto;
+	width: 25%;
+	font-family: 'Lora', sans-serif;
+	letter-spacing: 1.2em;
+	font-size: 2em;
+	margin-left: 6%;
+
+}
+
+.logo{
+	padding-bottom: 1%;
+	height: auto;
+	width: 100%;
+}
+
+.headBtn{
+	float: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 100%;
+	letter-spacing: 0.15em;
+	color: rgba(30, 30, 30, .8);
+	cursor: pointer;
+}
+
+
+
+.headBtn:hover{
+	color: black;
+}
+
+#hb0{
+	position: absolute;
+	top: 25%;
+	left: 61%;
+}
+#hb1{
+	position: absolute;
+	top: 25%;
+	left: 72.2%;
+}
+#hb2{
+	position: absolute;
+	top: 25%;
+	left: 86%;
+}
+
+
+
+.btnTop{
+	position: fixed;
+	height: 7.08%;
+	width: 4%;
+	bottom: 3%;
+	left: 94%;
+	color: rgba(97, 97, 97, .7);
+	background-color: rgba(144, 169, 129, .4);
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	cursor: pointer;
+	z-index: 999999;
+	display: none;
+}
+
+.btnTop:hover{
+	color: rgba(97, 97, 97, 1);
+	background-color: rgba(144, 169, 129, .9);
+	transition: all .3s ease;
+}
+
+
+
+.innerHead{
+	width: 50%;
+	float: left;
+	margin-top: 1.5%;
+	margin-left: 15.5%;
+}
+
+
+
+.buttons-wrapper{
+	border-left: 2px solid black;
+	float: left;
+	width: 17%;
+	margin-top: 1.5%;
+	margin-left: 6%;
+	maring-right: 15.5%;
+	display: block;
+}
+
+
+
+
+.button:hover{
+	color: black;
+	transition: all .3s ease;
+	cursor: pointer;
+}
+
+.aboutMe{
+	margin-top: 1%;
+}
+
+.aboutMePhoto{
+	max-width: 28%;
+	margin-left: 15.5%;
+	float: left;
+	margin-top: 2%;
+}
+
+.innerAboutMePhoto{
+	max-width: 100%;
+}
+
+.aboutMeText{
+	width: 50%;
+	float: left;
+	margin-left: 4.5%;
+}
+
+
+.innerAboutMeHead{
+	font-size: 1.7em;
+	font-family: 'Playfair Display', serif;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+}
+
+.innerAboutMeText{
+	width: 70%;
+	text-align: left;
+	font-size: 1.2em;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 1.7px;
+	line-height: 26px;
+}
+
+.portf{
+	margin-top: 5%;
+}
+.divideLine{
+	height: 5px;
+	background-color:rgba(144, 169, 129, .8);
+	
+}
+
+.portfText{
+	text-align: center;
+	font-family: 'Lora', serif;
+	font-size: 1.4em;
+	font-weight: lighter;
+	letter-spacing: 1.8px;
+	color: #403f3d;
+
+}
+
+.fillPortf{
+	width: 100%;
+}
+
+.photos{
+	width: 14.285%;
+	float: left;
+	padding: 5px;
+}
+
+
+
+.image{
+	max-width: 100%;
+	max-height: auto;
+}
+
+.image:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	transition: all 0.4s ease;
+}
+
+
+.popup{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	text-align: center;
+	z-index: 9999997;
+
+}
+
+.popup_bg {
+	background-color: rgba(100,0,0,0.4);
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	z-index: 9999998;
+}
+
+.popup_img {
+	margin-top: 1.8%;
+	position: relative;
+	z-index: 2;
+	max-width: auto;
+	max-height: 94%;
+	z-index: 9999999;
+
+}
+
+.signUp{
+	margin-top: 3%;
+}
+
+.grid{
+	font-family: 'Lora', serif;
+	float: left;
+}
+
+.fillAcc{
+	font-family: 'Prata', sans-serif;
+	font-weight: lighter;
+	font-size: 1.1em;
+}
+
+.slider{
+	margin-top: 2%;
+	margin-right: 4%;
+	width: 32%;
+	float: right;
+	
+}
+
+
+.sliderInner{
+	max-width: 100%;
+}
+
+.sliderInnerAfter{
+	max-width: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.record{
+	width: 57%;
+	margin-left: 4%;
+	font-family: 'Prata', serif;
+	font-size: 1.1em;
+}
+
+.recordHead{
+	text-align: center;
+	font-family: 'Lora', serif;
+	font-weight: lighter;
+	font-size: 1.4em;
+	letter-spacing: 1.8px;
+}
+
+#myPhone{
+	font-size: 1.1em;
+	padding-top: 0.5%;
+	padding-bottom: 3%;
+}
+
+.social{
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    float: left;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin: 0 10px 10px 0;
+    color: red;
+}
+
+
+
+.vkontakte{
+	background-color: white;
+	padding-top: 4px;
+}
+
+.vk{
+	color: #4273ad;
+}
+
+.vkontakte:hover{
+	background-color: #4273ad;
+	transition: all .3s ease;
+
+}
+.vkontakte:hover .vk{
+	color: white;
+	transition: all .3s ease;
+}
+
+
+.instagram{
+	background-color: white;
+	padding: 6px;
+}
+
+.inst{
+	color: #f73541;
+}
+
+.instagram:hover{
+	background: linear-gradient(to top, #ffd925, #7829d2);
+	transition: all .3s ease;
+	
+}
+.instagram:hover .inst{
+	color: white;
+	transition: all .3s ease;
+}
+
+.telegramm{
+	background-color: white;
+	padding: 6px;
+}
+
+.tlgrm{
+	color: #34b3f3;
+}
+
+.telegramm:hover{
+	background-color: #34b3f3;
+	transition: all .3s ease;
+	
+}
+.telegramm:hover .tlgrm{
+	color: white;
+	transition: all .3s ease;
+}
+
+footer{
+	width: 100%;
+	height: 10%;
+	color: rgba(143, 143, 143, .7);
+	margin-top: 2%;
+	font-family: 'Lora', sans-serif;
+	font-size: 1em;
+	text-align: center;
+}
+
+
+
+@media screen and (min-width: 951px){
+	.button{
+	margin-left: 3%;
+	font-size: 1.6em;
+	line-height: 130%;
+	letter-spacing: 2.5px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+}	
+	.headBtn{
+	float: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 100%;
+	letter-spacing: 0.15em;
+	color: rgba(30, 30, 30, .8);
+	cursor: pointer;
+}
+}
+
+@media screen and (max-width: 900px){
+	.button{
+	margin-left: 3%;
+	font-size: 1.3em;
+	line-height: 130%;
+	letter-spacing: 2px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+}	
+}
+
+@media screen and (max-width: 950px){
+	.button{
+	margin-left: 3%;
+	font-size: 1.3em;
+	line-height: 130%;
+	letter-spacing: 2px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+}	
+	.headBtn{
+	float: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 95%;
+	letter-spacing: 0.05em;
+	color: rgba(30, 30, 30, .8);
+	cursor: pointer;
+}
+}
+
+
+@media screen and (max-width: 850px){
+	.headBtn{
+	float: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 85%;
+	letter-spacing: 0.025em;
+	color: rgba(30, 30, 30, .8);
+	cursor: pointer;
+}
+.innerAboutMeHead{
+	font-size: 1.3em;
+	font-family: 'Playfair Display', serif;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 1.5px;
+}
+
+.innerAboutMeText{
+	width: 70%;
+	text-align: left;
+	font-size: 1em;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 1.4px;
+	line-height: 22px;
+}
+}
+
+@media screen and (max-width: 720px){
+	.button{
+	margin-left: 3%;
+	font-size: 1.1em;
+	line-height: 110%;
+	letter-spacing: 1.5px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+
+}	
+	.buttons-wrapper{
+	border-left: 1px solid black;
+	float: left;
+	width: 17%;
+	margin-top: 1.5%;
+	margin-left: 6%;
+	maring-right: 15.5%;
+	display: block;
+}
+
+	.logo{
+	display: none;
+}
+
+#hb0{
+	position: absolute;
+	top: 25%;
+	left: 15%;
+}
+#hb1{
+	position: absolute;
+	top: 25%;
+	left: 43%;
+}
+#hb2{
+	position: absolute;
+	top: 25%;
+	left: 73%;
+}
+.aboutMePhoto{
+	display: none;
+}
+.aboutMeText{
+	width: 100%;
+	margin:0, auto;
+}
+}
+
+
+@media screen and (max-width: 580px){
+	.button{
+	margin-left: 3%;
+	font-size: 0.9em;
+	line-height: 120%;
+	letter-spacing: 1.2px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+}	
+	.buttons-wrapper{
+	border-left: 1px solid black;
+	float: left;
+	width: 17%;
+	margin-top: 1.5%;
+	margin-left: 6%;
+	maring-right: 15.5%;
+	display: block;
+}
+}
+
+@media screen and (max-width: 480px){
+	.button{
+	margin-left: 3%;
+	font-size: 0.7em;
+	line-height: 100%;
+	letter-spacing: 1px;
+	color: gray;
+	font-family: 'Playfair Display', serif;
+}	
+	.buttons-wrapper{
+	border-left: 1px solid black;
+	float: left;
+	width: 17%;
+	margin-top: 1.5%;
+	margin-left: 6%;
+	maring-right: 15.5%;
+	display: block;
+}
+#hb0{
+	position: absolute;
+	top: 25%;
+	left: 10%;
+}
+#hb1{
+	position: absolute;
+	top: 25%;
+	left: 35%;
+}
+#hb2{
+	position: absolute;
+	top: 25%;
+	left: 65%;
+}
+
+.headBtn{
+	float: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 85%;
+	letter-spacing: 0.05em;
+	color: rgba(30, 30, 30, .8);
+	cursor: pointer;
+}
+}
+
