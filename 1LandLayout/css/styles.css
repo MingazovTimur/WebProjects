@@ -23,14 +23,14 @@ body {
   font-weight: bold;
 }
 
-.sectionHeader {
+.section-header .section-inner {
   color: white;
   background: url("../images/headerBG.gif") no-repeat 50% 50%;
   background-size: cover;
   position: relative;
   height: 100vh;
 }
-.sectionHeader .sectionInner:before {
+.section-header .section-inner:before {
   content: "";
   position: absolute;
   background: rgba(40, 40, 40, 0.6);
@@ -39,12 +39,12 @@ body {
   left: 0;
   right: 0;
 }
-.sectionHeaderNavNdLogo {
+.section-header-navNdLogo {
   display: flex;
   justify-content: flex-start;
   height: 100px;
 }
-.sectionHeaderLogo {
+.section-header-logo {
   font-family: "Archivo Black", sans-serif;
   z-index: 10;
   color: white;
@@ -53,7 +53,7 @@ body {
   padding-left: 7.2%;
   padding-top: 48px;
 }
-.sectionHeaderNav {
+.section-header-nav {
   font-family: "OpenSans", sans-serif;
   z-index: 10;
   padding-left: 37%;
@@ -62,15 +62,15 @@ body {
   font-size: 16px;
   align-self: flex-start;
 }
-.sectionHeaderNav div {
+.section-header-nav div {
   cursor: pointer;
   padding: 7px 15px 7px 15px;
 }
-.sectionHeaderNav div:hover {
+.section-header-nav div:hover {
   border: 1px solid white;
   border-radius: 25px;
 }
-.sectionHeaderPromo {
+.section-header-promo {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -78,7 +78,7 @@ body {
   text-align: center;
   margin-top: 200px;
 }
-.sectionHeaderPromoHead {
+.section-header-promo-head {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
@@ -90,7 +90,7 @@ body {
   text-align: center;
   margin-bottom: 44px;
 }
-.sectionHeaderPromoBody {
+.section-header-promo-body {
   font-family: OpenSans;
   z-index: 10;
   font-size: 16px;
@@ -98,7 +98,7 @@ body {
   text-align: center;
   padding-bottom: 265px;
 }
-.sectionHeaderPromoButton {
+.section-header-promo-button {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -110,17 +110,17 @@ body {
   border-radius: 50%;
   margin: 0 auto;
 }
-.sectionHeaderPromoButton:hover {
+.section-header-promo-button:hover {
   background-color: #19BD9A;
   transition: all 0.3s ease;
 }
 
-.sectionPromo .sectionInner {
+.section-promo .section-inner {
   background-color: #ffffff;
   height: 67vh;
   display: flex;
 }
-.sectionPromoFill {
+.section-promo-fill {
   flex-basis: 40%;
   justify-self: flex-start;
   display: flex;
@@ -128,7 +128,7 @@ body {
   padding-left: 19.5%;
   padding-right: 12%;
 }
-.sectionPromoFillHead {
+.section-promo-fill-head {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
@@ -137,7 +137,7 @@ body {
   text-align: left;
   margin-top: 114px;
 }
-.sectionPromoFillBody {
+.section-promo-fill-body {
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
   text-align: left;
@@ -145,7 +145,7 @@ body {
   color: gray;
   margin-top: 49px;
 }
-.sectionPromoFillButton {
+.section-promo-fill-button {
   padding: 7px 15px;
   font-family: "OpenSans", sans-serif;
   font-size: 16px;
@@ -156,46 +156,47 @@ body {
   border-radius: 25px;
   cursor: pointer;
 }
-.sectionPromoFillButton:hover {
+.section-promo-fill-button:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease;
 }
-.sectionPromoImage {
+.section-promo-image {
   flex-basis: 50%;
   margin-top: 100px;
 }
 
-.sectionDetails .sectionInner {
+.section-details .section-inner {
   height: 84vh;
 }
-.sectionDetailsHead {
+.section-details-head {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sectionDetailsHeadTitle {
+.section-details-head-title {
   padding-top: 80px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
 }
-.sectionDetailsHeadSubtitle {
+.section-details-head-subtitle {
   padding-top: 40px;
-  text-align: center;
-  width: 35%;
-  color: gray;
-  font-size: 14px;
   font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: gray;
+  text-align: center;
+  max-width: 500px;
 }
-.sectionDetailsHeadButtons {
+.section-details-head-buttons {
   padding-top: 62px;
   display: flex;
   flex-direction: row;
   width: 16%;
   justify-content: space-between;
 }
-.sectionDetailsHeadButtons .button {
+.section-details-head-buttons .button {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -207,19 +208,19 @@ body {
   background-color: #81868e;
   font-size: 25px;
 }
-.sectionDetailsHeadButtons .button:hover {
+.section-details-head-buttons .button:hover {
   background-color: #19BD9A;
 }
-.sectionDetailsBody {
-  padding-top: 60px;
+.section-details-body {
   padding-right: 22%;
   padding-left: 12.3%;
 }
-.sectionDetailsBodyTitle {
+.section-details-body-title {
+  padding-top: 40px;
   font-size: 20px;
   font-family: "OpenSans", serif;
 }
-.sectionDetailsBodyText {
+.section-details-body-text {
   font-size: 14px;
   font-family: "OpenSans", sans-serif;
   padding-top: 20px;
@@ -227,42 +228,42 @@ body {
   color: grey;
   justify-content: space-between;
 }
-.sectionDetailsBodyTextLeft {
+.section-details-body-text-left {
   max-width: 330px;
 }
-.sectionDetailsBodyTextRight {
+.section-details-body-text-right {
   max-width: 518px;
 }
 
-.sectionFeatured .innerSection {
+.section-featured .inner-section {
   background-color: white;
 }
-.sectionFeaturedHead {
-  padding-top: 80px;
+.section-featured-head {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
-.sectionFeaturedHeadTitle {
+.section-featured-head-title {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
-  text-align: center;
-  padding-bottom: 40px;
+  padding-top: 80px;
 }
-.sectionFeaturedHeadSubtitle {
-  color: gray;
+.section-featured-head-subtitle {
+  padding-top: 40px;
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
+  line-height: 25px;
+  color: gray;
   text-align: center;
-  padding-bottom: 64px;
-  padding: 0 33.5% 64px 33.5%;
+  max-width: 500px;
 }
-.sectionFeaturedWorks {
+.section-featured-works {
+  padding-top: 65px;
   display: flex;
 }
-.sectionFeaturedWorksFeature {
+.section-featured-works-feature {
   display: flex;
   height: 320px;
   width: 33.3%;
@@ -270,7 +271,7 @@ body {
   position: relative;
   cursor: pointer;
 }
-.sectionFeaturedWorksFeature span {
+.section-featured-works-feature span {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
@@ -281,12 +282,12 @@ body {
   align-self: center;
   position: absolute;
 }
-.sectionFeaturedWorksFeature img {
+.section-featured-works-feature img {
   z-index: 5;
   height: 100%;
   width: 100%;
 }
-.sectionFeaturedWorksFeature:before {
+.section-featured-works-feature:before {
   content: "";
   position: absolute;
   background: rgba(40, 40, 40, 0.6);
@@ -296,18 +297,18 @@ body {
   right: 0;
   z-index: 7;
 }
-.sectionFeaturedWorksFeature:hover {
+.section-featured-works-feature:hover {
   width: 51%;
   transition: all 0.5s ease;
   z-index: 10;
 }
-.sectionFeaturedWorksFeature:hover span {
+.section-featured-works-feature:hover span {
   display: none;
 }
-.sectionFeaturedWorksFeature:hover:before {
+.section-featured-works-feature:hover:before {
   display: none;
 }
-.sectionFeaturedFooter {
+.section-featured-footer {
   height: 113px;
   display: flex;
   background: url(../images/nogi.gif) 50% 50% no-repeat;
@@ -317,7 +318,7 @@ body {
   align-items: center;
   padding: 0 12.3%;
 }
-.sectionFeaturedFooter:before {
+.section-featured-footer:before {
   content: "";
   position: absolute;
   background: rgba(42, 155, 122, 0.6);
@@ -327,17 +328,17 @@ body {
   left: 0;
   z-index: 5;
 }
-.sectionFeaturedFooterText {
+.section-featured-footer-text {
   font-family: "OpenSans", sans-serif;
   font-size: 20px;
   z-index: 10;
   color: white;
   letter-spacing: 2px;
 }
-.sectionFeaturedFooterText span {
+.section-featured-footer-text span {
   font-weight: bold;
 }
-.sectionFeaturedFooterButton {
+.section-featured-footer-button {
   font-family: "OpenSans", sans-serif;
   font-size: 16px;
   z-index: 10;
@@ -346,47 +347,50 @@ body {
   border: 1px solid white;
   border-radius: 25px;
   justify-self: flex-start;
+  cursor: pointer;
 }
-.sectionFeaturedFooterButton:hover {
+.section-featured-footer-button:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease;
 }
 
-.sectionServices .innerSection {
+.section-services .inner-section {
   height: 86vh;
 }
-.sectionServicesHead {
+.section-services-head {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
 }
-.sectionServicesHeadTitle {
+.section-services-head-title {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
   padding-top: 80px;
 }
-.sectionServicesHeadSubtitle {
+.section-services-head-subtitle {
   padding-top: 40px;
-  color: gray;
+  font-family: "OpenSans", sans-serif;
   font-size: 14px;
-  max-width: 33%;
+  line-height: 25px;
+  color: gray;
   text-align: center;
+  max-width: 500px;
 }
-.sectionServicesBody {
+.section-services-body {
   display: flex;
   padding: 0 12.4%;
 }
-.sectionServicesBodyIcons {
+.section-services-body-icons {
   padding-right: 44px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 263px;
 }
-.sectionServicesBodyIcons .icon {
+.section-services-body-icons .icon {
   display: flex;
   height: 53px;
   width: 53px;
@@ -397,39 +401,39 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.sectionServicesBodyIcons .icon:hover {
+.section-services-body-icons .icon:hover {
   background: #19BD9A;
   transition: all 0.3s ease;
 }
-.sectionServicesBodyText {
+.section-services-body-text {
   display: flex;
   flex-direction: column;
   height: 260px;
   width: 430px;
   justify-content: space-between;
 }
-.sectionServicesBodyTextTitle {
+.section-services-body-text-title {
   font-size: 20px;
   font-family: "OpenSans", sans-serif;
 }
-.sectionServicesBodyTextSubtitle {
+.section-services-body-text-subtitle {
   font-size: 16px;
   letter-spacing: 2px;
   color: gray;
   font-family: "OpenSans", sans-serif;
 }
-.sectionServicesBodyTextMain {
+.section-services-body-text-main {
   font-size: 14px;
   color: gray;
   font-family: "OpenSans", sans-serif;
 }
-.sectionServicesBodyDiagrams {
+.section-services-body-diagrams {
   display: flex;
   justify-content: space-between;
   width: 490px;
   padding-left: 84px;
 }
-.sectionServicesBodyDiagramsElement {
+.section-services-body-diagrams-element {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: lighter;
@@ -438,7 +442,7 @@ body {
   width: 124px;
   justify-content: center;
 }
-.sectionServicesBodyDiagramsElementCircle {
+.section-services-body-diagrams-element-circle {
   position: relative;
   display: flex;
   justify-content: center;
@@ -446,17 +450,17 @@ body {
   padding-bottom: 25px;
   padding-top: 63px;
 }
-.sectionServicesBodyDiagramsElementCircle div {
+.section-services-body-diagrams-element-circle div {
   position: absolute;
   color: gray;
   font-size: 25px;
   font-family: "OpenSans", sans-serif;
 }
-.sectionServicesBodyDiagramsElementCircle div span {
+.section-services-body-diagrams-element-circle div span {
   font-size: 14px;
 }
 
-.sectionQuotes .innerSection {
+.section-quotes .inner-section {
   height: 53vh;
   background: black;
   position: relative;
@@ -464,11 +468,11 @@ body {
   background: url(../images/quotesBackground.gif) 50% 50% no-repeat;
   background-size: cover;
 }
-.sectionQuotesText {
+.section-quotes-text {
   padding: 80px 0 101px 7.2%;
   max-width: 50%;
 }
-.sectionQuotesTextTitle {
+.section-quotes-text-title {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
@@ -476,18 +480,18 @@ body {
   color: white;
   padding-bottom: 60px;
 }
-.sectionQuotesTextSubtitle {
+.section-quotes-text-subtitle {
   font-family: "OpenSans", sans-serif;
   font-size: 16px;
   color: gray;
   letter-spacing: 2px;
   padding-bottom: 33px;
 }
-.sectionQuotesTextAutor {
+.section-quotes-text-autor {
   font-size: 14px;
   color: gray;
 }
-.sectionQuotesImage {
+.section-quotes-image {
   position: absolute;
   z-index: 100;
   bottom: 140px;
@@ -495,28 +499,28 @@ body {
   right: 7.2%;
 }
 
-.sectionPortfolioHead {
+.section-portfolio-head {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sectionPortfolioHeadTitle {
+.section-portfolio-head-title {
   padding-top: 80px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
 }
-.sectionPortfolioHeadSubtitle {
+.section-portfolio-head-subtitle {
   padding-top: 40px;
-  font-size: 14px;
   font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
   color: gray;
-  letter-spacing: 2px;
-  width: 40%;
   text-align: center;
+  max-width: 500px;
 }
-.sectionPortfolioMenu {
+.section-portfolio-menu {
   height: 35px;
   margin: 0 auto;
   padding-top: 84px;
@@ -527,16 +531,16 @@ body {
   width: 46%;
   justify-content: space-around;
 }
-.sectionPortfolioMenuElement {
+.section-portfolio-menu-element {
   padding-bottom: 15px;
   cursor: pointer;
 }
-.sectionPortfolioMenuElement:hover {
+.section-portfolio-menu-element:hover {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, #f3f3f3 25%, #19BD9A 25%, #19BD9A 75%, #f3f3f3 75%, #f3f3f3 100%);
   border-image-slice: 1;
 }
-.sectionPortfolioContent {
+.section-portfolio-content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -546,18 +550,18 @@ body {
   width: 1112px;
   justify-content: space-between;
 }
-.sectionPortfolioContentElement {
+.section-portfolio-content-element {
   width: 270px;
   cursor: pointer;
   position: relative;
   z-index: 5;
 }
-.sectionPortfolioContentElement:hover .sectionPortfolioContentElementHover {
+.section-portfolio-content-element:hover .section-portfolio-content-element-hover {
   position: absolute;
   display: flex;
   z-index: 10;
 }
-.sectionPortfolioContentElement:hover:before {
+.section-portfolio-content-element:hover:before {
   content: "";
   z-index: 5;
   position: absolute;
@@ -567,38 +571,38 @@ body {
   left: 0;
   right: 0;
 }
-.sectionPortfolioContentElementHover {
+.section-portfolio-content-element-hover {
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
   padding: 0 40px;
 }
-.sectionPortfolioContentElementHover .title {
+.section-portfolio-content-element-hover .title {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
 }
-.sectionPortfolioContentElementHover hr {
+.section-portfolio-content-element-hover hr {
   background-color: #19BD9A;
   border: none;
   width: 23px;
   height: 1px;
   margin-bottom: 10px;
 }
-.sectionPortfolioContentElementHover .text {
+.section-portfolio-content-element-hover .text {
   height: 30%;
   font-size: 12px;
   font-family: "OpenSans", sans-serif;
   color: lightgrey;
 }
-.sectionPortfolioContentElementHover .buttons {
+.section-portfolio-content-element-hover .buttons {
   display: flex;
   width: 64px;
   justify-content: space-between;
 }
-.sectionPortfolioContentElementHover .buttonsElement {
+.section-portfolio-content-element-hover .buttons-element {
   align-self: flex-end;
   display: flex;
   justify-content: center;
@@ -610,60 +614,60 @@ body {
   color: white;
   cursor: pointer;
 }
-.sectionPortfolioContentElementHover .buttonsElement:hover {
+.section-portfolio-content-element-hover .buttons-element:hover {
   color: black;
   background-color: white;
   transition: all 0.2s ease;
 }
-.sectionPortfolioContent .element1 {
+.section-portfolio-content .element1 {
   height: 362px;
   background: url(../images/Portfolio/1.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element2 {
+.section-portfolio-content .element2 {
   height: 362px;
   background: url(../images/Portfolio/2.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element3 {
+.section-portfolio-content .element3 {
   height: 210px;
   background: url(../images/Portfolio/3.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element4 {
+.section-portfolio-content .element4 {
   height: 229px;
   background: url(../images/Portfolio/4.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element5 {
+.section-portfolio-content .element5 {
   height: 345px;
   background: url(../images/Portfolio/5.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element6 {
+.section-portfolio-content .element6 {
   height: 357px;
   background: url(../images/Portfolio/6.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element7 {
+.section-portfolio-content .element7 {
   height: 302px;
   background: url(../images/Portfolio/7.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element8 {
+.section-portfolio-content .element8 {
   height: 374px;
   background: url(../images/Portfolio/8.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element9 {
+.section-portfolio-content .element9 {
   height: 255px;
   background: url(../images/Portfolio/9.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element10 {
+.section-portfolio-content .element10 {
   height: 362px;
   background: url(../images/Portfolio/10.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element11 {
+.section-portfolio-content .element11 {
   height: 270px;
   background: url(../images/Portfolio/11.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioContent .element12 {
+.section-portfolio-content .element12 {
   height: 302px;
   background: url(../images/Portfolio/12.gif) 50% 50% no-repeat;
 }
-.sectionPortfolioFooter {
+.section-portfolio-footer {
   width: 1112px;
   height: 201px;
   background: url(../images/Portfolio/portfolioBG.gif) 50% 50% no-repeat;
@@ -674,57 +678,63 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.sectionPortfolioFooterText {
+.section-portfolio-footer-text {
   font-family: "OpenSans", sans-serif;
   color: white;
   padding-top: 58px;
   padding-bottom: 34px;
   font-size: 20px;
 }
-.sectionPortfolioFooterText span {
+.section-portfolio-footer-text span {
   font-weight: bold;
 }
-.sectionPortfolioFooterButton {
+.section-portfolio-footer-button {
   font-family: "OpenSans", sans-serif;
   color: white;
   font-size: 16px;
   padding: 7px 20px 7px 20px;
   border: 1px solid white;
   border-radius: 25px;
+  cursor: pointer;
+}
+.section-portfolio-footer-button:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
 }
 
-.sectionTeam {
+.section-team {
   background-color: #ffffff;
 }
-.sectionTeam .innerSection {
+.section-team .inner-section {
   padding: 0 12.3%;
 }
-.sectionTeamHead {
+.section-team-head {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sectionTeamHeadTitle {
+.section-team-head-title {
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
   letter-spacing: 8px;
   font-size: 20px;
   padding-top: 80px;
 }
-.sectionTeamHeadSubtitle {
+.section-team-head-subtitle {
   padding-top: 40px;
-  font-family: "OpenSans";
+  font-family: "OpenSans", sans-serif;
   font-size: 14px;
+  line-height: 25px;
   color: gray;
-  max-width: 500px;
   text-align: center;
+  max-width: 500px;
 }
-.sectionTeamContent {
+.section-team-content {
   padding-top: 65px;
   display: flex;
   justify-content: space-between;
 }
-.sectionTeamContentImage {
+.section-team-content-image {
   z-index: 10;
   height: 440px;
   min-width: 346px;
@@ -736,13 +746,13 @@ body {
   cursor: pointer;
   position: relative;
 }
-.sectionTeamContentImage:hover .sectionTeamContentImageHover {
+.section-team-content-image:hover .section-team-content-image-hover {
   display: flex;
 }
-.sectionTeamContentImage:hover:after .button {
+.section-team-content-image:hover:after .button {
   display: flex;
 }
-.sectionTeamContentImageHover {
+.section-team-content-image-hover {
   z-index: 5;
   display: none;
   height: 430px;
@@ -752,13 +762,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sectionTeamContentImageHover .buttons {
+.section-team-content-image-hover .buttons {
   display: flex;
   z-index: 15;
   width: 110px;
   justify-content: space-between;
 }
-.sectionTeamContentImageHover .buttons .button {
+.section-team-content-image-hover .buttons .button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -768,21 +778,21 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sectionTeamContentImageHover .buttons .button:hover {
+.section-team-content-image-hover .buttons .button:hover {
   color: #28243b;
   background-color: rgba(200, 200, 200, 0.7);
 }
-.sectionTeamContentInfo {
+.section-team-content-info {
   text-align: right;
   align-self: center;
 }
-.sectionTeamContentInfoName {
+.section-team-content-info-name {
   padding-right: 46px;
   font-family: "OpenSans", sans-serif;
   font-size: 20px;
   border-right: 5px solid #19BD9A;
 }
-.sectionTeamContentInfoName .position {
+.section-team-content-info-name .position {
   padding-top: 15px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -792,7 +802,7 @@ body {
   font-style: italic;
   color: gray;
 }
-.sectionTeamContentInfoText {
+.section-team-content-info-text {
   padding-right: 46px;
   max-width: 400px;
   padding-top: 35px;
@@ -800,12 +810,12 @@ body {
   font-size: 14px;
   color: gray;
 }
-.sectionTeamContentInfoSkills {
+.section-team-content-info-skills {
   margin-right: 46px;
   margin-left: 70px;
   padding-top: 15px;
 }
-.sectionTeamContentInfoSkillsElement {
+.section-team-content-info-skills-element {
   width: 330px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -819,33 +829,33 @@ body {
   padding-top: 36px;
   padding-bottom: 9px;
 }
-.sectionTeamContentInfoSkills .el1 {
+.section-team-content-info-skills .el1 {
   border-bottom: 4px solid transparent;
   border-image: linear-gradient(to right, #19BD9A 80%, lightgray 80%, lightgray 100%);
   border-image-slice: 1;
 }
-.sectionTeamContentInfoSkills .el2 {
+.section-team-content-info-skills .el2 {
   border-bottom: 4px solid transparent;
   border-image: linear-gradient(to right, #19BD9A 65%, lightgray 65%, lightgray 100%);
   border-image-slice: 1;
 }
-.sectionTeamContentInfoSkills .el3 {
+.section-team-content-info-skills .el3 {
   border-bottom: 4px solid transparent;
   border-image: linear-gradient(to right, #19BD9A 75%, lightgray 75%, lightgray 100%);
   border-image-slice: 1;
 }
-.sectionTeamSlider {
+.section-team-slider {
   display: flex;
   justify-content: center;
   padding-top: 61px;
   padding-bottom: 100px;
 }
-.sectionTeamSliderInner {
+.section-team-slider-inner {
   display: flex;
   width: 50px;
   justify-content: space-between;
 }
-.sectionTeamSliderInnerButton {
+.section-team-slider-inner-button {
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -853,11 +863,11 @@ body {
   background: white;
   cursor: pointer;
 }
-.sectionTeamSliderInnerButton:hover {
+.section-team-slider-inner-button:hover {
   background: #19BD9A;
   transition: all 0.2s ease;
 }
-.sectionTeamFooter {
+.section-team-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -867,12 +877,12 @@ body {
   background: url(../images/TeamFooter.gif) 50% 50% no-repeat;
   background-size: cover;
 }
-.sectionTeamFooterText {
+.section-team-footer-text {
   height: 50px;
   font-size: 20px;
   font-family: "OpenSans", sans-serif;
 }
-.sectionTeamFooterButton {
+.section-team-footer-button {
   font-size: 16px;
   font-family: "OpenSans", sans-serif;
   padding: 7px 20px 7px 20px;
@@ -880,18 +890,18 @@ body {
   border-radius: 25px;
   cursor: pointer;
 }
-.sectionTeamFooterButton:hover {
+.section-team-footer-button:hover {
   color: black;
   background-color: white;
   transition: all 0.2 ease;
 }
 
-.sectionTestimonialsHead {
+.section-testimonials-head {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sectionTestimonialsHeadTitle {
+.section-testimonials-head-title {
   padding-top: 80px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -899,53 +909,54 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 }
-.sectionTestimonialsHeadSubtitle {
+.section-testimonials-head-subtitle {
   padding-top: 40px;
+  font-family: "OpenSans", sans-serif;
   font-size: 14px;
+  line-height: 25px;
   color: gray;
-  font-family: "SansPro", sans-serif;
-  max-width: 500px;
   text-align: center;
+  max-width: 500px;
 }
-.sectionTestimonialsContent {
+.section-testimonials-content {
   background: #ffffff;
   margin: 63px 7.2% 100px 7.2%;
 }
-.sectionTestimonialsContentInner {
+.section-testimonials-content-inner {
   display: flex;
   padding-top: 52px;
   margin-left: 100px;
 }
-.sectionTestimonialsContentInnerImage {
+.section-testimonials-content-inner-image {
   padding-right: 70px;
 }
-.sectionTestimonialsContentInnerText {
+.section-testimonials-content-inner-text {
   max-width: 800px;
 }
-.sectionTestimonialsContentInnerTextMain {
+.section-testimonials-content-inner-text-main {
   font-size: 16px;
   font-family: "OpenSans", sans-serif;
   color: grey;
   padding-top: 7px;
 }
-.sectionTestimonialsContentInnerTextAutor {
+.section-testimonials-content-inner-text-autor {
   padding-top: 34px;
   font-weight: bold;
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
 }
-.sectionTestimonialsContentInnerTextAutor span {
+.section-testimonials-content-inner-text-autor span {
   color: black;
   font-weight: normal;
 }
-.sectionTestimonialsContentSlider {
+.section-testimonials-content-slider {
   padding: 50px 0 60px 0;
   margin: 0 auto;
   display: flex;
   width: 50px;
   justify-content: space-between;
 }
-.sectionTestimonialsContentSliderButton {
+.section-testimonials-content-slider-button {
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -953,12 +964,12 @@ body {
   background: white;
   cursor: pointer;
 }
-.sectionTestimonialsContentSliderButton:hover {
+.section-testimonials-content-slider-button:hover {
   background: #19BD9A;
   transition: all 0.2s ease;
 }
 
-.sectionBlog .innerSection {
+.section-blog .inner-section {
   padding: 0 7.2%;
   background: black;
   background: url(../images/blogBG.gif) 50% 50% no-repeat;
@@ -967,13 +978,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.sectionBlogSlider {
+.section-blog-slider {
   display: flex;
   flex-direction: column;
   height: 50px;
   justify-content: space-between;
 }
-.sectionBlogSliderButton {
+.section-blog-slider-button {
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -981,11 +992,11 @@ body {
   background: transparent;
   cursor: pointer;
 }
-.sectionBlogSliderButton:hover {
+.section-blog-slider-button:hover {
   background: white;
   transition: all 0.2s ease;
 }
-.sectionBlogContentTitle {
+.section-blog-content-title {
   padding-top: 80px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -993,24 +1004,27 @@ body {
   font-size: 20px;
   color: white;
 }
-.sectionBlogContentSubtitle {
+.section-blog-content-subtitle {
   padding-top: 40px;
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
+  line-height: 25px;
+  color: gray;
+  text-align: center;
+  max-width: 500px;
   line-height: 22px;
-  width: 500px;
   color: white;
 }
-.sectionBlogContentMainInner {
+.section-blog-content-main-inner {
   padding-top: 106px;
   padding-left: 5.1vw;
 }
-.sectionBlogContentMainInnerTitle {
+.section-blog-content-main-inner-title {
   font-family: "OpenSans", sans-serif;
   font-size: 20px;
   color: white;
 }
-.sectionBlogContentMainInnerAutor {
+.section-blog-content-main-inner-autor {
   padding-top: 13px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -1021,10 +1035,10 @@ body {
   color: gray;
   text-transform: uppercase;
 }
-.sectionBlogContentMainInnerAutor .name {
+.section-blog-content-main-inner-autor .name {
   color: #19BD9A;
 }
-.sectionBlogContentMainInnerRating {
+.section-blog-content-main-inner-rating {
   padding-top: 20px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -1033,14 +1047,14 @@ body {
   letter-spacing: 1px;
   color: darkgray;
 }
-.sectionBlogContentMainInnerText {
+.section-blog-content-main-inner-text {
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
   padding-top: 60px;
   max-width: 600px;
   color: gray;
 }
-.sectionBlogContentMainInnerButton {
+.section-blog-content-main-inner-button {
   padding-top: 55px;
   font-family: "OpenSans", sans-serif;
   font-size: 16px;
@@ -1048,17 +1062,17 @@ body {
   margin-bottom: 104px;
   cursor: pointer;
 }
-.sectionBlogContentMainInnerButton:hover {
+.section-blog-content-main-inner-button:hover {
   color: gray;
   transition: all 0.2s ease;
 }
 
-.sectionPricesHead {
+.section-prices-head {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sectionPricesHeadTitle {
+.section-prices-head-title {
   padding-top: 80px;
   font-family: "Source Sans Pro", lighter;
   font-weight: lighter;
@@ -1066,20 +1080,21 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 }
-.sectionPricesHeadSubtitle {
+.section-prices-head-subtitle {
   padding-top: 40px;
   font-family: "OpenSans", sans-serif;
-  width: 500px;
-  text-align: center;
   font-size: 14px;
+  line-height: 25px;
   color: gray;
+  text-align: center;
+  max-width: 500px;
 }
-.sectionPricesTariffs {
+.section-prices-tariffs {
   margin: 64px 19.5% 100px 19.5%;
   display: flex;
   justify-content: space-between;
 }
-.sectionPricesTariffsElement {
+.section-prices-tariffs-element {
   width: 17.2vw;
   height: 302px;
   background: white;
@@ -1089,20 +1104,20 @@ body {
   align-items: center;
   position: relative;
 }
-.sectionPricesTariffsElement:hover .sectionPricesTariffsElementHead {
+.section-prices-tariffs-element:hover .section-prices-tariffs-element-head {
   display: none;
 }
-.sectionPricesTariffsElement:hover .sectionPricesTariffsElementPrice {
+.section-prices-tariffs-element:hover .section-prices-tariffs-element-price {
   display: none;
 }
-.sectionPricesTariffsElement:hover .sectionPricesTariffsElementTerms {
+.section-prices-tariffs-element:hover .section-prices-tariffs-element-terms {
   opacity: 100%;
   transition: all 0.3s ease;
 }
-.sectionPricesTariffsElement:hover .sectionPricesTariffsElementButton {
+.section-prices-tariffs-element:hover .section-prices-tariffs-element-button {
   display: flex;
 }
-.sectionPricesTariffsElementHead {
+.section-prices-tariffs-element-head {
   width: 100%;
   color: white;
   text-transform: uppercase;
@@ -1116,7 +1131,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sectionPricesTariffsElementPrice {
+.section-prices-tariffs-element-price {
   margin-top: 66px;
   text-align: center;
   font-family: "Source Sans Pro", lighter;
@@ -1128,13 +1143,13 @@ body {
   letter-spacing: 1px;
   font-weight: bolder;
 }
-.sectionPricesTariffsElementPricePeriod {
+.section-prices-tariffs-element-price-period {
   font-family: "OpenSans", sans-serif;
   font-size: 20px;
   color: gray;
   font-weight: lighter;
 }
-.sectionPricesTariffsElementTerms {
+.section-prices-tariffs-element-terms {
   top: 40px;
   position: absolute;
   width: 12.4vw;
@@ -1145,7 +1160,7 @@ body {
   font-size: 14px;
   line-height: 25px;
 }
-.sectionPricesTariffsElementButton {
+.section-prices-tariffs-element-button {
   width: 100%;
   color: white;
   font-family: "OpenSans", sans-serif;
@@ -1159,12 +1174,300 @@ body {
   position: absolute;
   bottom: 0;
 }
-.sectionPricesTariffsElementButton:hover {
+.section-prices-tariffs-element-button:hover {
   color: gray;
   transition: all 0.3s ease;
 }
-.sectionPricesTariffsElementButton i {
+.section-prices-tariffs-element-button i {
   margin-left: 5px;
+}
+
+.section-subscribe .inner-section {
+  background: url(../images/subscribeBG.gif) 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+.section-subscribe .inner-section:before {
+  position: absolute;
+  content: "";
+  background: rgba(51, 51, 51, 0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+.section-subscribe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.section-subscribe-content-title {
+  z-index: 20;
+  padding-top: 80px;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", lighter;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  font-size: 20px;
+  color: white;
+}
+.section-subscribe-content-subtitle {
+  z-index: 20;
+  padding-top: 40px;
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: gray;
+  text-align: center;
+  max-width: 500px;
+}
+.section-subscribe-content-area {
+  z-index: 20;
+  width: 38%;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding-top: 64px;
+}
+.section-subscribe-content-area-input {
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 15px 0 15px 22px;
+  width: 65%;
+  background-color: transparent;
+  outline: none;
+}
+.section-subscribe-content-area-input::-webkit-input-placeholder {
+  color: white;
+}
+.section-subscribe-content-area-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  background-color: #19BD9A;
+  cursor: pointer;
+  width: 29%;
+}
+.section-subscribe-content-area-button:hover {
+  background-color: #91c48d;
+  transition: all 0.3s;
+}
+
+.section-contact-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-contact-head-title {
+  font-family: "Source Sans Pro", lighter;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  font-size: 20px;
+  padding-top: 80px;
+  text-transform: uppercase;
+}
+.section-contact-head-subtitle {
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: gray;
+  text-align: center;
+  max-width: 500px;
+  padding-top: 40px;
+}
+.section-contact-content {
+  padding: 64px 15.6% 100px 15.6%;
+  display: flex;
+  justify-content: space-between;
+}
+.section-contact-content-element {
+  width: 21.1vw;
+}
+.section-contact-content-element .mail {
+  background: url(../images/Contacts/mailBG.gif) 50% 50% no-repeat;
+  background-size: cover;
+}
+.section-contact-content-element .address {
+  background: url(../images/Contacts/addressBG.gif) 50% 50% no-repeat;
+  background-size: cover;
+}
+.section-contact-content-element .phone {
+  background: url(../images/Contacts/phoneBG.gif) 50% 50% no-repeat;
+  background-size: cover;
+}
+.section-contact-content-element-head {
+  height: 145px;
+  width: 100%;
+  font-size: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-contact-content-element-info {
+  height: 127px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "OpenSans", sans-serif;
+  background: white;
+  text-align: center;
+}
+.section-contact-content-element-info-contacts {
+  color: gray;
+  font-size: 14px;
+  line-height: 25px;
+}
+.section-contact-form {
+  padding: 80px 15.6% 130px 15.6%;
+  background: white;
+  width: calc(100% - (15.6*2));
+}
+.section-contact-form-contacts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.section-contact-form-contacts-element {
+  box-sizing: border-box;
+  width: 21vw;
+  outline: none;
+  font-size: 14px;
+  font-family: "OpenSans", sans-serif;
+  padding: 15px 0 15px 21px;
+}
+.section-contact-form-main {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 30px;
+  height: 190px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+.section-contact-form-button {
+  box-sizing: border-box;
+  margin-top: 30px;
+  width: 100%;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #19BD9A;
+  color: white;
+  font-family: "OpenSans";
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.section-contact-form-button:hover {
+  background-color: #91c48d;
+  transition: all 0.3 ease;
+}
+.section-contact-nav {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+.section-contact-nav:before {
+  position: absolute;
+  content: "FIND US ON THE MAP";
+  font-size: 16px;
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  background: rgba(36, 36, 36, 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-footer .inner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-footer-title {
+  padding-top: 80px;
+  font-family: "Archivo Black", sans-serif;
+  z-index: 10;
+  color: black;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.section-footer-subtitle {
+  padding-top: 25px;
+  font-size: 14px;
+  font-family: "OpenSans", sans-serif;
+  color: gray;
+}
+.section-footer-socials {
+  padding-top: 40px;
+  padding-bottom: 90px;
+  display: flex;
+  width: 172px;
+  justify-content: space-between;
+}
+.section-footer-socials-element {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.section-footer-socials .facebook {
+  background: #3b5998;
+}
+.section-footer-socials .facebook:hover {
+  color: #3b5998;
+  background-color: white;
+}
+.section-footer-socials .twitter {
+  background: #26a6d1;
+}
+.section-footer-socials .twitter:hover {
+  color: #26a6d1;
+  background-color: white;
+}
+.section-footer-socials .in {
+  background: #0e76a8;
+}
+.section-footer-socials .in:hover {
+  color: #0e76a8;
+  background-color: white;
+}
+.section-footer-socials .insta {
+  background: #3f729b;
+}
+.section-footer-socials .insta:hover {
+  color: #3f729b;
+  background-color: white;
+}
+.section-footer-socials .vk {
+  background: #86c9ef;
+}
+.section-footer-socials .vk:hover {
+  color: #86c9ef;
+  background-color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

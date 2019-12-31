@@ -14,6 +14,15 @@
 	color: grey;
 }
 
+@mixin SubtitleStyle{
+	font-family: 'OpenSans', sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+	color: gray;
+	text-align: center;
+	max-width: 500px;
+}
+
 @mixin greenFont{
 	font-weight: bold;
 	color: $backgroundGreen;
@@ -62,14 +71,15 @@ body{
 // ===/Fonts Decorate===
 
 // ===HEADER===
-.sectionHeader{
-	color: white;
-	background: url('../images/headerBG.gif') no-repeat 50% 50%;
-	background-size: cover;
-	position: relative;
-	height: 100vh;
+.section-header{
 	
-	.sectionInner{
+	
+	.section-inner{
+		color: white;
+		background: url('../images/headerBG.gif') no-repeat 50% 50%;
+		background-size: cover;
+		position: relative;
+		height: 100vh;
 
 		&:before{
 			content: '';
@@ -83,13 +93,13 @@ body{
 	}
 	
 
-	&NavNdLogo{
+	&-navNdLogo{
 		display: flex;
 		justify-content: flex-start;
 		height: 100px;
 	}
 
-	&Logo{
+	&-logo{
 		font-family: 'Archivo Black', sans-serif;
 		z-index: 10;
 		color: white;
@@ -99,7 +109,7 @@ body{
 		padding-top: 48px;
 	}
 
-	&Nav{
+	&-nav{
 		font-family: 'OpenSans', sans-serif;
 		z-index: 10;
 		padding-left: 37%;
@@ -125,7 +135,7 @@ body{
 	}
 
 
-	&Promo{
+	&-promo{
 		display: flex;
 		flex-direction: column;
 		width: 50%;
@@ -133,7 +143,7 @@ body{
 		text-align: center;
 		margin-top: 200px;
 
-		&Head{
+		&-head{
 			@include SansPro(35px);
 			font-weight: lighter;
 			z-index: 10;
@@ -143,7 +153,7 @@ body{
 			margin-bottom: 44px;
 		}
 
-		&Body{
+		&-body{
 			font-family: OpenSans;
 			z-index: 10;
 			font-size: 16px;
@@ -152,7 +162,7 @@ body{
 			padding-bottom: 265px;
 		}
 
-		&Button{
+		&-button{
 			cursor: pointer;
 			display: flex;
 			justify-content: center;
@@ -174,17 +184,17 @@ body{
 // ===/HEADER===
 
 // ===PROMO===
-.sectionPromo{
+.section-promo{
 	
 
-	.sectionInner{
+	.section-inner{
 		background-color: #ffffff;
 		height: 67vh;
 		display: flex;
 		
 	}
 	
-	&Fill{
+	&-fill{
 		flex-basis: 40%;
 		justify-self: flex-start;
 		display: flex;
@@ -193,14 +203,14 @@ body{
 		padding-right: 12%;
 
 
-		&Head{
+		&-head{
 			@include SansPro;
 			letter-spacing: 7px;
 			text-align: left;
 			margin-top: 114px;
 		}
 
-		&Body{
+		&-body{
 			font-family: 'OpenSans', sans-serif;
 			font-size: 14px;
 			text-align: left;
@@ -209,7 +219,7 @@ body{
 			margin-top: 49px;
 		}
 
-		&Button{
+		&-button{
 			padding: 7px 15px;
 			font-family: 'OpenSans', sans-serif;
 			font-size: 16px;
@@ -228,7 +238,7 @@ body{
 		}
 	}
 
-	&Image{
+	&-image{
 		flex-basis: 50%;
 		margin-top: 100px;
 	}
@@ -239,37 +249,33 @@ body{
 
 // ===DETAILS===
 
-.sectionDetails{
+.section-details{
 	
-	.sectionInner{
+	.section-inner{
 		height: 84vh;
 
 	}
 	
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		
 
 
-		&Title{
+		&-title{
 			padding-top: $topPaddingTitle;
 			@include SansPro;
 
 		}
 
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			text-align: center;
-			width: 35%;
-			color: gray;
-			font-size: 14px;
-			font-family: 'OpenSans', sans-serif;
+			@include SubtitleStyle;
 
 		}
 
-		&Buttons{
+		&-buttons{
 			padding-top: 62px;
 			display: flex;
 			flex-direction: row;
@@ -299,18 +305,18 @@ body{
 	}
 
 	
-	&Body{
-		padding-top: 60px;
+	&-body{
 		padding-right: 22%;
 		padding-left: 12.3%;
 		
 
-		&Title{
+		&-title{
+			padding-top: $topPaddingSubtitle;
 			font-size: 20px;
 			font-family: 'OpenSans', serif;
 		}
 
-		&Text{
+		&-text{
 			font-size: 14px;
 			font-family: 'OpenSans', sans-serif;
 			padding-top: 20px;
@@ -320,59 +326,57 @@ body{
 
 			
 			
-			&Left{
+			&-left{
 				max-width: 330px;
 			
 
 			}
 
 
-			&Right{
+			&-right{
 				max-width: 518px;
 			}
 		}
 	}
 }
+
+// ===/DETAILS===
+
 // ===FEATURE===
 
-.sectionFeatured{
+.section-featured{
 
 
-	.innerSection{
+	.inner-section{
 			background-color: white;
 	}
 
 
-	&Head{
-		padding-top: $topPaddingTitle;
+	&-head{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 
 
-		&Title{
+		&-title{
 			@include SansPro;
-			text-align: center;
-			padding-bottom: $topPaddingSubtitle;
+			padding-top: $topPaddingTitle;
 		}
 
-		&Subtitle{
-			color: gray;
-			font-family: 'OpenSans', sans-serif;
-			font-size: 14px;
-			text-align: center;
-			padding-bottom: 64px;
-			padding: 0 33.5% 64px 33.5%;
+		&-subtitle{
+			padding-top: $topPaddingSubtitle;
+			@include SubtitleStyle;
 		}
 	}
 	
-	&Works{
+	&-works{
+		padding-top: 65px;
 		display: flex;
 		
 
 		
 
-		&Feature{
+		&-feature{
 			display: flex;
 			height: 320px;
 			width: 33.3%;
@@ -424,7 +428,7 @@ body{
 		}
 	}
 
-	&Footer{
+	&-footer{
 		height: 113px;
 		display: flex;
 		background: url(../images/nogi.gif) 50% 50% no-repeat;
@@ -445,7 +449,7 @@ body{
 			z-index: 5;
 		}
 
-		&Text{
+		&-text{
 			font-family: 'OpenSans', sans-serif;
 			font-size: 20px;
 			z-index: 10;
@@ -457,7 +461,7 @@ body{
 			}
 		}
 
-		&Button{
+		&-button{
 			font-family: 'OpenSans', sans-serif;
 			font-size: 16px;
 			z-index: 10;
@@ -466,6 +470,7 @@ body{
 			border: 1px solid white;
 			border-radius: 25px;
 			justify-self: flex-start;
+			cursor: pointer;
 
 			&:hover{
 				box-shadow: 0 5px 10px rgba(0,0,0,0.5);
@@ -479,37 +484,34 @@ body{
 
 // ===SERVICES===
 
-.sectionServices{
+.section-services{
 	
-	.innerSection {
+	.inner-section {
 		height: 86vh;
 	}
 
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding-bottom: 64px;
 
-		&Title{
+		&-title{
 			@include SansPro;
 			padding-top: $topPaddingTitle;
 		}
 
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			color: gray;
-			font-size: 14px;
-			max-width: 33%;
-			text-align: center;
+			@include SubtitleStyle;
 		}
 	}
 
-	&Body{
+	&-body{
 		display: flex;
 		padding: 0 12.4%;
 
-		&Icons{
+		&-icons{
 			padding-right: 44px;
 			display: flex;
 			flex-direction: column;
@@ -533,7 +535,7 @@ body{
 			}
 		}
 		
-		&Text{
+		&-text{
 			display: flex;
 			flex-direction: column;
 			height: 260px;
@@ -541,38 +543,38 @@ body{
 			justify-content: space-between;
 			
 
-			&Title{
+			&-title{
 				font-size: 20px;
 				font-family: 'OpenSans', sans-serif;
 			}
 
-			&Subtitle{
+			&-subtitle{
 				font-size: 16px;
 				letter-spacing: 2px;
 				color: gray;
 				font-family: 'OpenSans', sans-serif;
 			}
 
-			&Main{
+			&-main{
 				font-size: 14px;
 				color: gray;
 				font-family: 'OpenSans', sans-serif;
 			}
 		}
 
-		&Diagrams{
+		&-diagrams{
 			display: flex;
 			justify-content: space-between;
 			width: 490px;
 			padding-left: 84px;
 			
-			&Element{
+			&-element{
 				@include Roboto;
 				text-align: center;
 				width: 124px;
 				justify-content: center;
 
-				&Circle{
+				&-circle{
 					position: relative;
 					display: flex;
 					justify-content: center;
@@ -601,9 +603,9 @@ body{
 
 // ===QUOTES===
 
-.sectionQuotes{
+.section-quotes{
 
-	.innerSection{
+	.inner-section{
 		height: 53vh;
 		background: black;
 		position: relative;
@@ -612,18 +614,18 @@ body{
 		background-size: cover;
 	}
 
-	&Text{
+	&-text{
 		padding: 80px 0 101px 7.2%; 
 		
 		max-width: 50%;
 
-		&Title{
+		&-title{
 			@include SansPro;
 			color: white;
 			padding-bottom: 60px;
 		}
 
-		&Subtitle{
+		&-subtitle{
 			font-family: 'OpenSans', sans-serif;
 			font-size: 16px;
 			color: gray;
@@ -631,14 +633,14 @@ body{
 			padding-bottom: 33px;
 
 		}
-		&Autor{
+		&-autor{
 			font-size: 14px;
 			color: gray;
 
 		}
 	}
 
-	&Image{
+	&-image{
 		position: absolute;
 		z-index: 100;
 		bottom: 140px;
@@ -650,30 +652,25 @@ body{
 
 // ===PORTFOLIO===
 
-.sectionPortfolio {
+.section-portfolio {
 
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		&Title{
+		&-title{
 			padding-top: $topPaddingTitle;
 			@include SansPro;
 		}
 
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			font-size: 14px;
-			font-family: 'OpenSans', sans-serif;
-			color: gray;
-			letter-spacing: 2px;
-			width: 40%;
-			text-align: center;
+			@include SubtitleStyle;
 		}
 	}
 
-	&Menu{
+	&-menu{
 		height: 35px;
 		margin: 0 auto;
 		padding-top: 84px;
@@ -684,7 +681,7 @@ body{
 		width: 46%;
 		justify-content: space-around;
 
-		&Element{
+		&-element{
 			padding-bottom: 15px;
 			cursor: pointer;
 
@@ -696,7 +693,7 @@ body{
 		}
 	}
 
-	&Content{
+	&-content{
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -707,7 +704,7 @@ body{
 		justify-content: space-between;
 	
 
-		&Element{
+		&-element{
 			width: 270px;
 			cursor: pointer;
 			position: relative;
@@ -716,7 +713,7 @@ body{
 
 			&:hover{
 				
-				.sectionPortfolioContentElementHover{
+				.section-portfolio-content-element-hover{
 					position: absolute;
 					display: flex;
 					z-index: 10;
@@ -735,7 +732,7 @@ body{
 					}
 				}
 			
-			&Hover{
+			&-hover{
 				display: none;
 				flex-direction: column;
 				justify-content: space-evenly;
@@ -772,7 +769,7 @@ body{
 					width: 64px;
 					justify-content: space-between;
 					
-					&Element{
+					&-element{
 						align-self: flex-end;
 						display: flex;
 						justify-content: center;
@@ -854,7 +851,7 @@ body{
 		}
 	}
 
-	&Footer{
+	&-footer{
 		width: 1112px;
 		height: 201px;
 		background: url(../images/Portfolio/portfolioBG.gif) 50% 50% no-repeat;
@@ -865,7 +862,7 @@ body{
 		flex-direction: column;
 		align-items: center;
 
-		&Text{
+		&-text{
 			font-family: 'OpenSans', sans-serif;
 			color: white;
 			padding-top: 58px;
@@ -877,57 +874,58 @@ body{
 			}
 		}
 
-		&Button{
+		&-button{
 			font-family: 'OpenSans', sans-serif;
 			color: white;
 			font-size: 16px;
 			padding: 7px 20px 7px 20px;
 			border: 1px solid white;
 			border-radius: 25px;
+			cursor: pointer;
+
+				&:hover{
+				box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+				transition: all .2s ease;
+				}
 
 		}
 	}
-
 }
 
 // ===/PORTFOLIO===
 
 // ===TEAM===
 
-.sectionTeam{
+.section-team{
 	background-color: #ffffff;
 	
-	.innerSection{
+	.inner-section{
 		padding: 0 12.3%;
 		
 	}
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		&Title{
+		&-title{
 			@include SansPro;
 			padding-top: $topPaddingTitle;
 		}
 		
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			font-family: 'OpenSans';
-			font-size: 14px;
-			color: gray;
-			max-width: 500px;
-			text-align: center;
+			@include SubtitleStyle;
 		}
 	}
 
-	&Content{
+	&-content{
 		padding-top: 65px;
 		display: flex;
 		justify-content: space-between;
 
 	
-		&Image{
+		&-image{
 			z-index: 10;
 			height: 440px;
 			min-width: 346px;
@@ -940,7 +938,7 @@ body{
 			position: relative;
 
 			&:hover{
-				.sectionTeamContentImageHover{
+				.section-team-content-image-hover{
 					display: flex;
 				}
 
@@ -953,7 +951,7 @@ body{
 			}
 
 
-			&Hover{	
+			&-hover{	
 				z-index: 5;
 				display: none;
 				height: 430px;
@@ -988,12 +986,12 @@ body{
 			}	
 		}
 
-		&Info{
+		&-info{
 			text-align: right;
 			align-self: center;
 			
 
-			&Name{
+			&-name{
 				padding-right: 46px;
 				font-family: 'OpenSans', sans-serif;
 				font-size: 20px;
@@ -1008,7 +1006,7 @@ body{
 					color: gray;
 				}
 			}
-			&Text{
+			&-text{
 				padding-right: 46px;
 				max-width: 400px;
 				padding-top: 35px;
@@ -1017,14 +1015,14 @@ body{
 				color: gray;
 			}
 
-			&Skills{
+			&-skills{
 				margin-right: 46px;
 				margin-left: 70px;
 				
 				padding-top: 15px;
 
 
-				&Element{
+				&-element{
 					width: 330px;
 					@include SansPro;
 					font-size: 16px;
@@ -1058,17 +1056,18 @@ body{
 		}
 	}
 
-	&Slider{
+	&-slider{
 		display: flex;
 		justify-content: center;
 		padding-top: 61px;
 		padding-bottom: 100px;
-		&Inner{
+
+		&-inner{
 			display: flex;
 			width: 50px;
 			justify-content: space-between;
 
-			&Button{
+			&-button{
 				height: 10px;
 				width: 10px;
 				border-radius: 50%;
@@ -1084,7 +1083,7 @@ body{
 		}
 	}
 
-	&Footer{
+	&-footer{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -1094,13 +1093,13 @@ body{
 		background: url(../images/TeamFooter.gif) 50% 50% no-repeat;
 		background-size: cover;
 
-		&Text{
+		&-text{
 			height: 50px;
 			font-size: 20px;
 			font-family: 'OpenSans', sans-serif;
 		}
 
-		&Button{
+		&-button{
 			font-size: 16px;
 			font-family: 'OpenSans', sans-serif;
 			padding: 7px 20px 7px 20px;
@@ -1122,59 +1121,55 @@ body{
 
 // ===TESTIMONIALS===
 
-.sectionTestimonials{
+.section-testimonials{
 	
-	.sectionInner{
+	.section-inner{
 		
 	}
 
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		
-		&Title{
+		&-title{
 			padding-top: $topPaddingTitle;
 			@include SansPro;
 			text-transform: uppercase;
 		}
 
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			font-size: 14px;
-			color: gray;
-			font-family: 'SansPro', sans-serif;
-			max-width: 500px;
-			text-align: center;
+			@include SubtitleStyle;
 			
 		}
 	}
 
-	&Content{
+	&-content{
 		background: #ffffff;
 		margin: 63px 7.2% 100px 7.2%;
 
-		&Inner{
+		&-inner{
 			display: flex;
 			padding-top: 52px;
 			margin-left: 100px;
 
-			&Image{
+			&-image{
 				padding-right: 70px;
 
 			}
 
-			&Text{
+			&-text{
 				max-width: 800px;
 
-				&Main{
+				&-main{
 					font-size: 16px;
 					font-family: 'OpenSans', sans-serif;
 					color: grey;
 					padding-top: 7px;
 				}
 
-				&Autor{
+				&-autor{
 					padding-top: 34px;
 					font-weight: bold;
 					font-family: 'OpenSans', sans-serif;
@@ -1188,14 +1183,14 @@ body{
 			}
 		}
 
-		&Slider{
+		&-slider{
 			padding: 50px 0 60px 0;
 			margin: 0 auto;
 			display: flex;
 			width: 50px;
 			justify-content: space-between;
 
-			&Button{
+			&-button{
 				height: 10px;
 				width: 10px;
 				border-radius: 50%;
@@ -1217,9 +1212,9 @@ body{
 
 // ===BLOG===
 
-.sectionBlog{
+.section-blog{
 
-	.innerSection{
+	.inner-section{
 		padding: 0 7.2%;
 		background: black;
 		background: url(../images/blogBG.gif) 50% 50% no-repeat;
@@ -1229,13 +1224,13 @@ body{
 		align-items: center;
 
 	}
-	&Slider{
+	&-slider{
 		display: flex;
 		flex-direction: column;
 		height: 50px;
 		justify-content: space-between;
 
-		&Button{
+		&-button{
 			height: 10px;
 			width: 10px;
 			border-radius: 50%;
@@ -1250,38 +1245,36 @@ body{
 		}
 	}
 
-	&Content{
+	&-content{
 		
 
-		&Title{
+		&-title{
 			padding-top: $topPaddingTitle;
 			@include SansPro;
 			color: white;
 
 		}
 		
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			font-family: 'OpenSans', sans-serif;
-			font-size: 14px;
+			@include SubtitleStyle;
 			line-height: 22px;
-			width: 500px;
 			color: white;
 		}
 
-		&Main{
+		&-main{
 
-			&Inner{
+			&-inner{
 				padding-top: 106px;
 				padding-left: 5.1vw;
 
-				&Title{
+				&-title{
 					font-family: 'OpenSans', sans-serif;
 					font-size: 20px;
 					color: white;
 				}
 
-				&Autor{
+				&-autor{
 					padding-top: 13px;
 					@include SansPro(14px);
 					letter-spacing: 1px;
@@ -1294,14 +1287,14 @@ body{
 					}
 				}
 
-				&Rating{
+				&-rating{
 					padding-top: 20px;
 					@include SansPro(14px);
 					letter-spacing: 1px;
 					color: darkgray;
 				}
 
-				&Text{
+				&-text{
 					font-family: 'OpenSans', sans-serif;
 					font-size: 14px;
 					padding-top: 60px;
@@ -1309,7 +1302,7 @@ body{
 					color: gray;
 				}
 
-				&Button{
+				&-button{
 					padding-top: 55px;
 					font-family: 'OpenSans', sans-serif;
 					font-size: 16px;
@@ -1331,36 +1324,32 @@ body{
 
 // ===PRICES===
 
-.sectionPrices{
+.section-prices{
 
-	&Head{
+	&-head{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		&Title{
+		&-title{
 			padding-top: $topPaddingTitle;
 			@include SansPro;
 			text-transform: uppercase;
 
 		}
 
-		&Subtitle{
+		&-subtitle{
 			padding-top: $topPaddingSubtitle;
-			font-family: 'OpenSans', sans-serif;
-			width: 500px;
-			text-align: center;
-			font-size: 14px;
-			color: gray;
+			@include SubtitleStyle;
 		}
 	}
 
-	&Tariffs{
+	&-tariffs{
 		margin: 64px 19.5% 100px 19.5%;
 		display: flex;
 		justify-content: space-between;
 
-		&Element{
+		&-element{
 			width: 17.2vw;
 			height: 302px;
 			background: white;
@@ -1373,25 +1362,25 @@ body{
 			&:hover{
 				
 
-				.sectionPricesTariffsElementHead{
+				.section-prices-tariffs-element-head{
 					display: none;
 				}
 
-				.sectionPricesTariffsElementPrice{
+				.section-prices-tariffs-element-price{
 					display: none;
 				}
 
-				.sectionPricesTariffsElementTerms{
+				.section-prices-tariffs-element-terms{
 					opacity: 100%;
 					transition: all .3s ease;
 				}
 				
-				.sectionPricesTariffsElementButton{
+				.section-prices-tariffs-element-button{
 					display: flex;
 				}
 			}
 
-			&Head{
+			&-head{
 				width: 100%;
 				color: white;
 				text-transform: uppercase;
@@ -1407,7 +1396,7 @@ body{
 				align-items: center;
 			}
 
-			&Price{
+			&-price{
 				margin-top: 66px;
 				text-align: center;
 				@include SansPro;
@@ -1416,7 +1405,7 @@ body{
 				letter-spacing: 1px;
 				font-weight: bolder;
 
-				&Period{
+				&-period{
 					font-family: 'OpenSans', sans-serif;
 					font-size: 20px;
 					color: gray;
@@ -1424,7 +1413,7 @@ body{
 				}
 			}
 
-			&Terms{
+			&-terms{
 				top: 40px;
 				position: absolute;
 				width: 12.4vw;
@@ -1437,7 +1426,7 @@ body{
 
 			}
 
-			&Button{
+			&-button{
 				width: 100%;
 				color: white;
 				font-family: 'OpenSans', sans-serif;
@@ -1469,4 +1458,344 @@ body{
 // ===/PRICES===
 
 
+// ===SUBSCRIBE===
 
+.section-subscribe{
+	
+
+	.inner-section{
+		background: url(../images/subscribeBG.gif) 50% 50% no-repeat;
+		background-size: cover;
+		position: relative;
+		z-index: 10;
+
+		&:before {
+			position: absolute;
+			content: '';
+			background: rgba(51, 51, 51, .8);
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 5;
+		}
+	}
+	
+	&-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 100px;
+
+		&-title{
+			z-index: 20;
+			padding-top: $topPaddingTitle;
+			text-transform: uppercase;
+			@include SansPro;
+			color: white;
+		}
+
+		&-subtitle{
+			z-index: 20;
+			padding-top: $topPaddingSubtitle;
+			@include SubtitleStyle;
+		}
+
+		&-area{
+			z-index: 20;
+			width: 38%;
+			display: flex;
+			justify-content: space-between;
+			height: 40px;
+			padding-top: 64px;
+
+			&-input{
+				font-family: 'OpenSans', sans-serif;
+				font-size: 14px;
+				color: white;
+				padding: 15px 0 15px 22px;
+				width: 65%;
+				background-color: transparent;
+				outline: none;
+
+			}
+
+			&-input::-webkit-input-placeholder{ 
+				color: white;
+			}
+
+			&-button{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-transform: uppercase;
+				font-family: 'OpenSans', sans-serif;
+				font-size: 14px;
+				background-color: $backgroundGreen;
+				cursor: pointer;
+				width: 29%;
+
+				&:hover{
+					background-color: #91c48d;
+					transition: all .3s;
+				}
+			}
+		}
+
+	}
+
+}
+
+// ===/SUBSCRIBE===
+
+// ===CONTACT===
+
+.section-contact{
+
+	&-head{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-title{
+			@include SansPro;
+			padding-top: $topPaddingTitle;
+			text-transform: uppercase;
+		}
+
+		&-subtitle{
+			@include SubtitleStyle;
+			padding-top: $topPaddingSubtitle;
+		}
+	}
+
+	&-content{
+		padding: 64px 15.6% 100px 15.6%;
+		
+		display: flex;
+		justify-content: space-between;
+
+		&-element{
+			width: 21.1vw;
+
+			.mail{
+				background: url(../images/Contacts/mailBG.gif) 50% 50% no-repeat;
+				background-size: cover;
+			}
+
+			.address{
+				background: url(../images/Contacts/addressBG.gif) 50% 50% no-repeat;
+				background-size: cover;
+			}
+
+			.phone{
+				background: url(../images/Contacts/phoneBG.gif) 50% 50% no-repeat;
+				background-size: cover;
+			}
+			
+			&-head{
+				height: 145px;
+				width: 100%;
+				font-size: 50px;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			&-info{
+				height: 127px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				text-transform: uppercase;
+				font-size: 16px;
+				font-family: 'OpenSans', sans-serif;
+				background: white;
+				text-align: center;
+
+				&-contacts{
+					color: gray;
+					font-size: 14px;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+
+	&-form{
+		padding: 80px 15.6% 130px 15.6%;
+		background: white;
+		width: calc(100% - (15.6*2));
+
+		&-contacts{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			box-sizing: border-box;
+			
+			&-element{
+				box-sizing: border-box;
+				width: 21vw;
+				outline: none;
+				font-size: 14px;
+				font-family: 'OpenSans', sans-serif;
+				padding:15px 0 15px 21px;
+			}
+		}
+
+		&-main{
+			box-sizing: border-box;
+			width: 100%;
+			margin-top: 30px;
+			height: 190px;
+			width: 100%;
+			outline: none;
+			font-size: 14px;
+		}
+
+		&-button{
+			box-sizing: border-box;
+			margin-top: 30px;
+			width: 100%;
+			height: 53px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $backgroundGreen;
+			color: white;
+			font-family: 'OpenSans';
+			font-size: 16px;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&:hover{
+				background-color: #91c48d;
+				transition: all .3 ease;
+			}
+		}
+	}
+
+	&-nav{
+		height: 500px;
+		width: 100%;
+		position: relative;
+		
+		&:before{
+			position: absolute;
+			content: 'FIND US ON THE MAP';
+			font-size: 16px;
+			color: white;
+			font-family: 'OpenSans', sans-serif;
+			background: rgba(36, 36, 36, .6);
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+	}
+}
+
+// ===/CONTACT===
+
+// ===FOOTER===
+
+.section-footer{
+
+	.inner-section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	&-title{
+		padding-top: $topPaddingTitle;
+		font-family: 'Archivo Black', sans-serif;
+		z-index: 10;
+		color: black;
+		font-size: 25px;
+		font-weight: bolder;
+
+	}
+
+	&-subtitle{
+		padding-top: 25px;
+		font-size: 14px;
+		font-family: 'OpenSans', sans-serif;
+		color: gray;
+
+	}
+
+	&-socials{
+		padding-top: 40px;
+		padding-bottom: 90px;
+		display: flex;
+		width: 172px;
+		justify-content: space-between;
+
+		&-element{
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.facebook{
+			background: #3b5998;
+
+			&:hover{
+			color: #3b5998;
+			background-color: white;
+			}
+		}
+
+		.twitter{
+			background: #26a6d1;
+
+			&:hover{
+			color: #26a6d1;
+			background-color: white;
+			}
+		}
+
+		.in{
+			background: #0e76a8;
+
+			&:hover{
+			color: #0e76a8;
+			background-color: white;
+			}
+		}
+
+		.insta{
+			background: #3f729b;
+
+			&:hover{
+			color: #3f729b;
+			background-color: white;
+			}
+		}
+
+		.vk{
+			background: #86c9ef;
+
+			&:hover{
+			color: #86c9ef;
+			background-color: white;
+			}
+		}
+	}
+}
+
+// ===/FOOTER===
